@@ -2,6 +2,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from fastapi import HTTPException
 
+from fastapi import UploadFile, File, HTTPException
+import shutil
+import uuid
+
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from transformers import pipeline
@@ -105,6 +109,45 @@ def get_answer(request: QueryRequest):
     except Exception as e:
         traceback.print_exc()  # Optional: print full traceback in terminal
         raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
+    
+
+
+@app.post("/upload")
+async def upload_file(file: UploadFile = File(...)):
+    try:
+        # Ensure docs folder exists
+        os.makedirs("docs", exist_ok=True)
+
+        # Validate file extension
+        extension = file.filename.split(".")[-1]
+        if extension != "txt":
+            raise HTTPException(status_code=400, detail="Only .txt files supported")
+
+        # Save file with unique name
+        unique_name = f"{uuid.uuid4().hex}.txt"
+        file_path = os.path.join("docs", unique_name)
+
+        with open(file_path, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+
+        # Embed the uploaded content
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        embedding = embed_model.encode([content])
+        index.add(embedding)
+
+        # Update in-memory and disk
+        docs.append(content)
+        with open("doc_names.txt", "a") as f:
+            f.write(unique_name + "\n")
+
+        faiss.write_index(index, "vector.index")
+
+        return {"status": "success", "file": unique_name}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Upload failed: {str(e)}")
 
 
 @app.get("/health")
