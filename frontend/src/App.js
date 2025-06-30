@@ -58,24 +58,20 @@ function App() {
 
 
   const handleUpload = async () => {
-    if (!file) {
-      setUploadStatus("Please select a .txt file.");
-      return;
-    }
-  
-    const formData = new FormData();
-    formData.append("file", file);
+    if (!file) return;
   
     setUploading(true);
     setUploadStatus("");
   
+    const formData = new FormData();
+    formData.append("file", file);
+  
     try {
-      const res = await axios.post("http://localhost:8000/upload", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
+      const response = await axios.post("http://localhost:8000/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
       });
-      setUploadStatus(`Upload successful: ${res.data.file}`);
+  
+      setUploadStatus(`Uploaded ${response.data.file} successfully.`);
     } catch (err) {
       console.error(err);
       setUploadStatus("Upload failed.");
@@ -83,6 +79,8 @@ function App() {
       setUploading(false);
     }
   };
+  
+  
   
   
 
@@ -134,16 +132,17 @@ function App() {
         </div>
       </div>
 
+      <div style={{ marginTop: '30px' }}>
+      <h3>Upload Custom Document</h3>
       <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-        <input
-          type="file"
-          accept=".txt"
-          onChange={(e) => setFile(e.target.files[0])}
-        />
+        <input type="file" accept=".txt" onChange={(e) => setFile(e.target.files[0])} />
         <button onClick={handleUpload} disabled={uploading}>
           {uploading ? "Uploading..." : "Upload"}
         </button>
       </div>
+      {uploadStatus && <p style={{ marginTop: "10px", color: "green" }}>{uploadStatus}</p>}
+    </div>
+
 
 
 
