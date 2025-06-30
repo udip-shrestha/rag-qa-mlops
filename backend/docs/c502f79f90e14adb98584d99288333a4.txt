@@ -1,0 +1,67 @@
+ Please describe how you have shown interest in software development and/or data analytics.
+
+I have shown deep interest in software development by taking related coursework to gain a solid foundation. This included taking classes on programming languages such as Python, C and Java, data structures and algorithms, databases, and machine learning. I consistently got engaged in projects that allowed me to apply theoretical knowledge to practical problems, such as developing a web application using HTML, CSS, and JavaScript. I have also created my personal portfolio website using these skills(https://udipshrestha.me/). These academic experiences not only improved my technical skills but also deepened my understanding of software development.
+
+Outside of the coursework, I have worked on personal projects to further explore my personal interests. For example, I developed a small-scale Mario game using the object oriented programming concepts in Python. Furthermore, I also created a breakout game which is implemented in C using the Stanford Portable Library(SPL). The game uses the SPL for graphics and event handling.
+
+By recognizing the importance of learning in this field of technology, I have taken several online courses to further my knowledge such as cloud computing, and machine learning techniques.
+
+
+
+
+
+
+
+ Describe your involvement in the following activities: Non-Engineering, Campus, Fine Arts, Engineering, Athletic, ROTC, Community or Other.
+
+I have been currently involved in athletic and community in Iowa State University. I am a member of Martial Arts club and have been practicing Taekwondo since a month ago. My involvement in the Martial Arts club signifies that I am committed to both mental and physical discipline. It has offered me many opportunity for personal development. This activity has helped me develop mental fortitude, improved focus, stress management techniques, and an ability to remain composed when confronted with challenges. These are the skills which are extremely useful in both personal and academic life. Also, learning useful self-defense skills has provided me greater confidence in my ability to defend others as well as myself, than when I used to have before joining Martial Arts. I have realized how crucial it is to set goals and follow them. It is a technique that is similar to the discipline required for success in all the aspects of our life. Being an active member of the club, it has also improved my leadership skills and teamwork abilities.
+
+I am also involved as an executive member of Nepalese Student Association in Iowa State University. As an executive member, I play a crucial role in building Nepalese student community and promoting our culture within the university. The responsibilities of this role are broad and include organizing social activities and cultural events along with representing the interests and expectations of Nepalese students. As an active member of this organization, it reflects my commitment to providing guidance while serving as an important connection between Nepalese students and larger campus community. My job requires abilities like proper planning, teamwork, and effective communication skills which are essential to both personal and academic success. I make a substantial contribution to Iowa State University's unique club and cultivate an inclusive atmosphere that values diversity and mutual respect between people of different parts of the world.
+
+
+
+
+
+
+
+The general application asked about why you chose to attend ISU. Why did you choose to major in engineering? (500 words or less)
+
+My decision to major in engineering was motivated by a set of innovative challenges and personal curiosity. I have always been interested in engineering, so taking things apart to learn about their working mechanism was not just a hobby for me during my childhood but also an indicator of my future interest in engineering. This curiosity developed into a passion for solving problems and discovering new ideas.
+
+The field of engineering is at its pinnacle of shaping the future. It combines scientific ideas with creativity to create technology and solutions that solve some of the most important issues taking on society right now, such as healthcare improvements and climate change. The chance to be a part of such innovative projects had an important impact in the choice I made. It truly exciting while using theoretical and scientific ideas to plan, evaluate, and create a practical product that may improve people's lives.
+
+The engineering is basically about creation and continuous improvements. It offers an interesting atmosphere where learning never ceases. I have always been driven to the situations that test my abilities and present problems, so this aspect of engineering really attracted to me to pursue it. Engineering is a dynamic and important subject because it provides a solid foundation in critical thinking and problem-solving abilities that are applicable to a wide range of professions and situations.
+
+The aspect of working together in a team was a major factor in my decision as well. Projects in engineering frequently require collaboration, bringing together people with various backgrounds, skillsets and viewpoints to accomplish a common goal. Apart from being a good place to acquire knowledge from others, this interactive atmosphere encourages us to be creative by combining various ideas and skills.
+
+Another important factor to take it into consideration was the wide variety of job opportunities in engineering. The fields in which people in engineering majors can pursue are computer and software engineering, electrical, aerospace, mechanical, biomedical, civil engineering and many more. Due to this flexibility, I was able to explore a variety of interests within the engineering field before deciding on a particular major that matched my interests and abilities. In conclusion, I chose to major in engineering because of my intrinsic interest about how things operate, my desire to help solve problems, the field's creative and growing nature, the opportunity to work with great minds, and the wide array of career options available. I wanted to be a part of engineering because it's more than just a field; it's a way of thinking and approaching challenges that might have an enormous impact on the world.
+
+
+
+
+
+
+
+In addition to the information you submitted on the general application, please also let us know your immediate career or professional goals post-graduation. (500 words or less)
+
+My childhood interests about becoming an engineer significantly influenced my decision to major in software engineering. Adapting to ISU's curriculum had its challenges, but it also gave me a strong will to continue to work hard and succeed. This educational journey serves as a reminder of how crucial it is to study diligently and aim for higher grades. A software engineering certificate is not simply a part of my career where I made it to, but rather a clear demonstration of my commitment to this sector.
+
+Furthermore, my academic activities and I am fully convinced that gaining more technological skills are important. My devotion to success includes giving my all to programming projects that provide practical application experience. Starting with the organizations and events around my major, which is crucial since it increases my knowledge and develops my professional connections. These interactions are priceless because they create a feeling of friendship within a technology-focused environment and prepare the way for a brilliant innovative career in future. My career in software is driven by the unquenchable thirst for learning complex skills, and selfless contributions towards the betterment of the academic community. These projects shape me towards a well-experienced and knowledgeable professional capable of academic achievement.
+
+After completion of my studies, I will focus on my machine learning, software development, and augmented reality/virtual reality(AR/VR) skills to contribute to real applications. There can be great opportunities across all sectors of economy in the new branches of science and technology. My goals are to deepen my understanding in these fast-developing arenas and add value to the creation of innovative ideas that will address the challenges of the present time as well as to upgrade the skills I possess in the evolving disciplines. My primary objective after graduation is securing a position as a software developer with a focus in machine learning applications. This role would enable me to apply my programming skills and deep understanding of  machine learning algorithms to create intelligent systems that will learn from data, evolve with time , and are able to make decisions even without human input. I am interested in natural language processing and computer vision projects due to the possibility of  these advances improving accessibility of technologies and user experience in digital platform.
+
+On the other hand, I am also enthusiastic about the possibilities of AR and VR development because of their potential to redefine interaction by introducing an impressive experience that can change the way people learn, get entertainment and receive health care. I have the goal of working on a project that finely shows the limits of AR and VR and making applications by educating and solving real time issues. My immediate professional goals are primarily motivated by a desire to lead the way in technical innovation and use my engineering background to create solutions that have a beneficial impact in society. I'm committed to actively influencing the direction of technology, whether it be through software development, AR/VR projects, or machine learning applications.
+
+
+
+
+
+
+
+
+
+Why are you applying for a scholarship?
+
+Financial obstacles have played a significant role in preventing me from pursuing my higher degree because of my poor upbringing. I am applying for this scholarship because it could help me overcome those obstacles in the future. My financial resources are impacted by the rising expenses of living, tuition, books and other utilities. It would be my motivation that makes me pursue my academic goals without having to worry about excessive amount of debt, if I am considered for this scholarship. My academic exertion would be greatly supported by this scholarship, which would allow me to focus on my college work without worrying about my financial hardships.
+
+This scholarship award would cover up my expenses of living, necessary textbooks and resources, and also reduce my tuition fee. This would free up more time for me to devote my time on my studies rather than working for extreme time in part time jobs. It would give me an opportunity to attend workshops and allow me to do projects related to my field of interests. Receiving this scholarship would also be a huge reward of my perseverance and hard work. It would strengthen my commitment to achieve outstanding grades and contribute significantly to my community. My family's financial burden would be greatly reduced by this engineering scholarship, allowing me to pursue my goals without stressing about money. This financial aid would also be a crucial step towards reaching my goals of contributing  and giving back to the community.

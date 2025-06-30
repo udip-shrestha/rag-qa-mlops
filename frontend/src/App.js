@@ -133,7 +133,7 @@ function App() {
       </div>
 
       <div style={{ marginTop: '30px' }}>
-      <h3>Upload Custom Document</h3>
+      <h3>Upload Document</h3>
       <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
         <input type="file" accept=".txt" onChange={(e) => setFile(e.target.files[0])} />
         <button onClick={handleUpload} disabled={uploading}>

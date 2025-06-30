@@ -14,6 +14,9 @@ import faiss
 import os
 import logging
 
+import mlflow
+import mlflow.sklearn
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -42,6 +45,21 @@ embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-base")
 index = faiss.read_index("vector.index")
 
+
+def load_docs():
+    with open("doc_names.txt", "r") as f:
+        names = [line.strip() for line in f]
+
+    contents = []
+    for name in names:
+        with open(os.path.join("docs", name), "r", encoding="utf-8") as f:
+            contents.append(f.read())
+    return contents
+
+def load_index():
+    return faiss.read_index("vector.index")
+
+
 with open("doc_names.txt", "r") as f:
     doc_names = [line.strip() for line in f]
 
@@ -63,7 +81,10 @@ def get_answer(request: QueryRequest):
         if not query:
             raise HTTPException(status_code=400, detail="Question cannot be empty.")
 
-        # Check if FAISS index is loaded
+        # Dynamically load latest index and docs
+        index = load_index()
+        docs = load_docs()
+
         if index.ntotal == 0:
             raise HTTPException(status_code=500, detail="FAISS index is empty or not loaded properly.")
 
@@ -84,9 +105,9 @@ def get_answer(request: QueryRequest):
         except IndexError:
             raise HTTPException(status_code=500, detail="Document index out of range.")
         except Exception as e:
-                logger.error(f"Unexpected error: {str(e)}")
-                traceback.print_exc()
-                raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
+            logger.error(f"Unexpected error: {str(e)}")
+            traceback.print_exc()
+            raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
 
         # Construct the prompt
         prompt = (
@@ -96,20 +117,27 @@ def get_answer(request: QueryRequest):
             f"Give a complete and helpful sentence as your answer:"
         )
 
-        # Use QA model safely
-        try:
-            result = qa_pipeline(prompt, max_length=200, do_sample=False)
-        except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Text generation error: {str(e)}")
+        # Run MLflow logging + QA pipeline
+        with mlflow.start_run():
+            mlflow.log_param("embedding_model", "all-MiniLM-L6-v2")
+            mlflow.log_param("qa_model", "google/flan-t5-base")
+            mlflow.log_param("top_k", 1)
+            mlflow.log_param("query", query)
 
-        return {"answer": result[0]["generated_text"]}
+            result = qa_pipeline(prompt, max_length=200, do_sample=False)
+            answer = result[0]["generated_text"]
+
+            mlflow.log_metric("context_length", len(top_doc))
+            mlflow.log_text(answer, "answer.txt")
+
+        return {"answer": answer}
 
     except HTTPException as http_err:
-        raise http_err  # Propagate known HTTP errors
+        raise http_err
     except Exception as e:
-        traceback.print_exc()  # Optional: print full traceback in terminal
-        raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
-    
+        logger.error(f"Unhandled exception: {str(e)}")
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Unhandled error: {str(e)}")  
 
 
 @app.post("/upload")
