@@ -7,6 +7,12 @@ function App() {
   const [loading, setLoading] = useState(false);
 
 
+  const [file, setFile] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState('');
+  const [uploading, setUploading] = useState(false);
+
+
+
     // Inject keyframes once
     useEffect(() => {
       const styleTag = document.createElement('style');
@@ -49,6 +55,33 @@ function App() {
       setLoading(false);      // stop loading
     }
   };
+
+
+  const handleUpload = async () => {
+    if (!file) return;
+  
+    setUploading(true);
+    setUploadStatus("");
+  
+    const formData = new FormData();
+    formData.append("file", file);
+  
+    try {
+      const response = await axios.post("http://localhost:8000/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+  
+      setUploadStatus(`Uploaded ${response.data.file} successfully.`);
+    } catch (err) {
+      console.error(err);
+      setUploadStatus("Upload failed.");
+    } finally {
+      setUploading(false);
+    }
+  };
+  
+  
+  
   
 
   return (
@@ -98,6 +131,23 @@ function App() {
           {loading ? <div style={spinnerStyle}></div> : <p>{answer}</p>}
         </div>
       </div>
+
+      <div style={{ marginTop: '30px' }}>
+      <h3>Upload Document</h3>
+      <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+        <input type="file" accept=".txt" onChange={(e) => setFile(e.target.files[0])} />
+        <button onClick={handleUpload} disabled={uploading}>
+          {uploading ? "Uploading..." : "Upload"}
+        </button>
+      </div>
+      {uploadStatus && <p style={{ marginTop: "10px", color: "green" }}>{uploadStatus}</p>}
+    </div>
+
+
+
+
+      
+
     </div>
   );
   
