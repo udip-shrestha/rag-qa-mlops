@@ -2,5 +2,8 @@ fastapi
 uvicorn
 transformers
 sentence-transformers
+torch
 faiss-cpu
 mlflow
+python-multipart
+

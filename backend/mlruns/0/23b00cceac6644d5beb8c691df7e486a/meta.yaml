@@ -1,0 +1,14 @@
+artifact_uri: file:///app/mlruns/0/23b00cceac6644d5beb8c691df7e486a/artifacts
+end_time: 1751513757139
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 23b00cceac6644d5beb8c691df7e486a
+run_name: delicate-robin-674
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751513754372
+status: 3
+tags: []
+user_id: root

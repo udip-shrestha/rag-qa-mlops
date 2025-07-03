@@ -1,0 +1,14 @@
+artifact_uri: file:///app/mlruns/0/c83eca03c8fd4421b2cb5c331a1d0309/artifacts
+end_time: 1751513805704
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c83eca03c8fd4421b2cb5c331a1d0309
+run_name: burly-stag-344
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751513785672
+status: 3
+tags: []
+user_id: root

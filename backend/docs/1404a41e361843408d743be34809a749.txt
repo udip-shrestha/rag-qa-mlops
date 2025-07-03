@@ -1,0 +1,38 @@
+TEAMMATES Proof of Submission
+1738032069581::20250127204158-0600
+==============================
+Submitted by: Udip Shrestha [udips@iastate.edu]
+Course: SE3390-Spring25
+Session: Feedback for week 1 (non-graded)
+
+
+
+1: How well did the team member contribute?
+ag1zfnRlYW1tYXRlc3Y0ch0LEhBGZWVkYmFja1F1ZXN0aW9uGICAkKXfhpEJDA
+4406d39c5bb53575f9cdf65ff458793b
+> etmayer@iastate.edu
+Equal share
+> idenning@iastate.edu
+Equal share
+> mabrooks@iastate.edu
+Equal share
+> matthill@iastate.edu
+Equal share
+> udips@iastate.edu
+Equal share
+
+
+2: Rate the student's work 
+ag1zfnRlYW1tYXRlc3Y0ch0LEhBGZWVkYmFja1F1ZXN0aW9uGICAkIX-m4AJDA
+808c06b0c1940721e31304bd5186337e
+> etmayer@iastate.edu
+a,Strongly Agree,4,b,Strongly Agree,4,c,Strongly Agree,4
+> idenning@iastate.edu
+a,Strongly Agree,4,b,Strongly Agree,4,c,Strongly Agree,4
+> mabrooks@iastate.edu
+a,Strongly Agree,4,b,Strongly Agree,4,c,Strongly Agree,4
+> matthill@iastate.edu
+a,Strongly Agree,4,b,Strongly Agree,4,c,Strongly Agree,4
+> udips@iastate.edu
+a,Strongly Agree,4,b,Strongly Agree,4,c,Strongly Agree,4
+

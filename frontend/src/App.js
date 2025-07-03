@@ -41,9 +41,10 @@ function App() {
     setLoading(true);         // start loading
     setAnswer('');            // clear previous answer
     try {
-      const response = await axios.post('http://localhost:8000/answer', {
+      const response = await axios.post('/answer', {
         question: question
       });
+      
       setAnswer(response.data.answer);
     } catch (err) {
       if (err.response && err.response.data && err.response.data.detail) {
@@ -67,7 +68,8 @@ function App() {
     formData.append("file", file);
   
     try {
-      const response = await axios.post("http://localhost:8000/upload", formData, {
+      const response = await axios.post("/upload", formData, {
+
         headers: { "Content-Type": "multipart/form-data" },
       });
   
