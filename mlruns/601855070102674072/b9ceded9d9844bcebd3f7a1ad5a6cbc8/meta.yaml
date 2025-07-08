@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/b9ceded9d9844bcebd3f7a1ad5a6cbc8/artifacts
+end_time: 1751739705025
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: b9ceded9d9844bcebd3f7a1ad5a6cbc8
+run_name: popular-whale-356
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751739704251
+status: 4
+tags: []
+user_id: root

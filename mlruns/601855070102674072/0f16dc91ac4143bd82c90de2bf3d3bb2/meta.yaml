@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/0f16dc91ac4143bd82c90de2bf3d3bb2/artifacts
+end_time: 1751737592411
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 0f16dc91ac4143bd82c90de2bf3d3bb2
+run_name: carefree-turtle-952
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751737589942
+status: 3
+tags: []
+user_id: root

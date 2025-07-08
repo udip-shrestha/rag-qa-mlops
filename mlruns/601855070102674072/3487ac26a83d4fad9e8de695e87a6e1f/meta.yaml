@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/3487ac26a83d4fad9e8de695e87a6e1f/artifacts
+end_time: 1751739607644
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 3487ac26a83d4fad9e8de695e87a6e1f
+run_name: dazzling-ape-110
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751739606557
+status: 4
+tags: []
+user_id: root

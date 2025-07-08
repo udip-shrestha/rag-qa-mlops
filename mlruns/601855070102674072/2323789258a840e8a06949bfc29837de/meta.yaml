@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/2323789258a840e8a06949bfc29837de/artifacts
+end_time: 1751739868919
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 2323789258a840e8a06949bfc29837de
+run_name: abundant-fawn-479
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751739867017
+status: 3
+tags: []
+user_id: root

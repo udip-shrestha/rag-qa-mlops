@@ -16,6 +16,16 @@ import logging
 
 import mlflow
 import mlflow.sklearn
+import numpy as np
+
+drift_embeddings = []  # to track embeddings for drift
+DRIFT_THRESHOLD = 0.6  # cosine distance threshold (adjustable)
+
+
+
+mlflow.set_tracking_uri("http://mlflow:5000")
+mlflow.set_experiment("rag-qa")
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -123,6 +133,9 @@ def get_answer(request: QueryRequest):
             mlflow.log_param("qa_model", "google/flan-t5-base")
             mlflow.log_param("top_k", 1)
             mlflow.log_param("query", query)
+            mlflow.log_param("question_length", len(query))
+            mlflow.log_param("context_length", len(top_doc))
+            
 
             result = qa_pipeline(prompt, max_length=200, do_sample=False)
             answer = result[0]["generated_text"]
@@ -171,6 +184,11 @@ async def upload_file(file: UploadFile = File(...)):
             f.write(unique_name + "\n")
 
         faiss.write_index(index, "vector.index")
+
+        # Log to MLflow
+        with mlflow.start_run():
+            mlflow.log_param("uploaded_file", unique_name)
+            mlflow.log_artifact(file_path)
 
         return {"status": "success", "file": unique_name}
 
