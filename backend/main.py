@@ -9,6 +9,7 @@ import uuid
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from transformers import pipeline
+from prometheus_fastapi_instrumentator import Instrumentator
 import traceback
 import faiss
 import os
@@ -17,6 +18,10 @@ import logging
 import mlflow
 import mlflow.sklearn
 import numpy as np
+
+
+
+
 
 drift_embeddings = []  # to track embeddings for drift
 DRIFT_THRESHOLD = 0.6  # cosine distance threshold (adjustable)
@@ -41,6 +46,7 @@ logger = logging.getLogger(__name__)
 
 
 app = FastAPI()
+Instrumentator().instrument(app).expose(app)
 
 app.add_middleware(
     CORSMiddleware,

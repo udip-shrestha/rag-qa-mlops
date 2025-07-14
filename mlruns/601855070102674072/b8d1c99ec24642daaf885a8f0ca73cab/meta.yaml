@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/b8d1c99ec24642daaf885a8f0ca73cab/artifacts
+end_time: 1752444478042
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: b8d1c99ec24642daaf885a8f0ca73cab
+run_name: monumental-roo-107
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752444476811
+status: 3
+tags: []
+user_id: root

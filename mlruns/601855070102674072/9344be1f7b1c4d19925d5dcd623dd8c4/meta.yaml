@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/9344be1f7b1c4d19925d5dcd623dd8c4/artifacts
+end_time: 1752443056060
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 9344be1f7b1c4d19925d5dcd623dd8c4
+run_name: smiling-crab-209
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752443051578
+status: 3
+tags: []
+user_id: root

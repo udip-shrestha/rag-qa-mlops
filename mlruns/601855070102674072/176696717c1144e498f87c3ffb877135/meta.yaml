@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/176696717c1144e498f87c3ffb877135/artifacts
+end_time: 1752447572775
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 176696717c1144e498f87c3ffb877135
+run_name: rare-hare-199
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752447572182
+status: 3
+tags: []
+user_id: root

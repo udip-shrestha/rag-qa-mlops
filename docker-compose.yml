@@ -32,6 +32,36 @@ services:
     networks:
       - rag-network
 
+
+  prometheus:
+      image: prom/prometheus
+      container_name: prometheus
+      volumes:
+        - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      command:
+        - "--config.file=/etc/prometheus/prometheus.yml"
+      ports:
+        - "9090:9090"
+      networks:
+        - rag-network
+
+  grafana:
+      image: grafana/grafana:latest
+      container_name: rag-grafana
+      ports:
+        - "3001:3000"  # Access Grafana at http://localhost:3001
+      depends_on:
+        - prometheus
+      networks:
+        - rag-network
+      volumes:
+        - grafana-storage:/var/lib/grafana
+
+volumes:
+  vector-data:
+  grafana-storage:
+
+
 networks:
   rag-network:
     driver: bridge

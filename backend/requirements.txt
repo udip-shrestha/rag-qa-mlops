@@ -6,4 +6,6 @@ torch
 faiss-cpu
 mlflow
 python-multipart
+prometheus-fastapi-instrumentator
+
 
