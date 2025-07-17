@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/0c553f6a71654852aced7989dc1ac8fa/artifacts
+end_time: 1752790198247
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 0c553f6a71654852aced7989dc1ac8fa
+run_name: redolent-dolphin-678
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752790190277
+status: 3
+tags: []
+user_id: root

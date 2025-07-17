@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/5a89de9a1a254d399240a8cdeb6e6d89/artifacts
+end_time: 1752718679479
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 5a89de9a1a254d399240a8cdeb6e6d89
+run_name: clean-gnu-442
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752718679056
+status: 3
+tags: []
+user_id: root

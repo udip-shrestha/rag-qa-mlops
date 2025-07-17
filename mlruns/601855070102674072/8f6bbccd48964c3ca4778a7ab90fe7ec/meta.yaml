@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/8f6bbccd48964c3ca4778a7ab90fe7ec/artifacts
+end_time: 1752730105548
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 8f6bbccd48964c3ca4778a7ab90fe7ec
+run_name: amazing-crane-733
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752730103177
+status: 3
+tags: []
+user_id: root

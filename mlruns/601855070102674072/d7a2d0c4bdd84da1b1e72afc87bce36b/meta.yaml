@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/d7a2d0c4bdd84da1b1e72afc87bce36b/artifacts
+end_time: 1752730134235
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: d7a2d0c4bdd84da1b1e72afc87bce36b
+run_name: caring-finch-419
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752730131995
+status: 3
+tags: []
+user_id: root

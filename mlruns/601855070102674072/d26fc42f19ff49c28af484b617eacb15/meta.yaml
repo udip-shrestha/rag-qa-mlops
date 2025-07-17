@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/d26fc42f19ff49c28af484b617eacb15/artifacts
+end_time: 1752705436127
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: d26fc42f19ff49c28af484b617eacb15
+run_name: rebellious-pig-896
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752705433493
+status: 3
+tags: []
+user_id: root

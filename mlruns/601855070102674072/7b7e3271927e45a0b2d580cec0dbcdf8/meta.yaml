@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/7b7e3271927e45a0b2d580cec0dbcdf8/artifacts
+end_time: 1752795027873
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 7b7e3271927e45a0b2d580cec0dbcdf8
+run_name: clean-sow-821
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752795009424
+status: 3
+tags: []
+user_id: root

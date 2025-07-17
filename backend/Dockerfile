@@ -9,9 +9,15 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements.txt and install Python packages
+# Copy requirements.txt
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# Force numpy<2.0.0 first to avoid Evidently conflict
+RUN pip install "numpy<2.0.0"
+
+# Then install the rest of the requirements
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
 
 # Copy all backend files into the container
 COPY . .

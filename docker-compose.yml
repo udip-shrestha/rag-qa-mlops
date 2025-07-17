@@ -10,6 +10,8 @@ services:
       - ./backend:/app
     networks:
       - rag-network
+    environment:
+      - PYTHONPATH=/app
 
   frontend:
     build: ./frontend

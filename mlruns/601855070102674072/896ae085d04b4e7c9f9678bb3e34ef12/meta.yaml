@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/896ae085d04b4e7c9f9678bb3e34ef12/artifacts
+end_time: 1752718896712
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 896ae085d04b4e7c9f9678bb3e34ef12
+run_name: whimsical-sheep-953
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752718894719
+status: 3
+tags: []
+user_id: root

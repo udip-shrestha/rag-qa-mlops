@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/a246aff1b412495c9d5fafc3aa75c110/artifacts
+end_time: 1752730149273
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: a246aff1b412495c9d5fafc3aa75c110
+run_name: melodic-bee-569
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752730145320
+status: 3
+tags: []
+user_id: root

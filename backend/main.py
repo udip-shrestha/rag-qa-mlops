@@ -10,10 +10,14 @@ from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from transformers import pipeline
 from prometheus_fastapi_instrumentator import Instrumentator
+# from drift_detector import DriftDetector
+
+
 import traceback
 import faiss
 import os
-import logging
+import logging  
+import subprocess
 
 import mlflow
 import mlflow.sklearn
@@ -25,6 +29,15 @@ import numpy as np
 
 drift_embeddings = []  # to track embeddings for drift
 DRIFT_THRESHOLD = 0.6  # cosine distance threshold (adjustable)
+
+# query_log = []
+# detector = DriftDetector()
+# reference_queries = [
+#     "how to train model",
+#     "what is mlops",
+#     "explain transformers"
+# ]
+# detector.update_reference(reference_queries)
 
 
 
@@ -96,6 +109,16 @@ def get_answer(request: QueryRequest):
         logger.info(f"Received question: {query}")
         if not query:
             raise HTTPException(status_code=400, detail="Question cannot be empty.")
+        
+
+         # Drift Detection: track query and trigger retrain if needed
+        # query_log.append(query)
+
+        # if len(query_log) >= 10:
+        #     drift = detector.check_drift(query_log[-10:])
+        #     if drift:
+        #         subprocess.Popen(["python", "retrain.py"])
+        #         logger.info("Drift detected. Retraining triggered.")
 
         # Dynamically load latest index and docs
         index = load_index()

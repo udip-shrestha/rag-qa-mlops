@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/9439768747824b6398fee4ce2908fb94/artifacts
+end_time: 1752729741112
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 9439768747824b6398fee4ce2908fb94
+run_name: handsome-hen-134
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752729740044
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/3c8e01b9d3f246328c18bf411083422f/artifacts
+end_time: 1752730141815
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 3c8e01b9d3f246328c18bf411083422f
+run_name: intelligent-carp-422
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752730139288
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/1145589c95b94eaba4476ab4d282d5d2/artifacts
+end_time: 1752705510907
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 1145589c95b94eaba4476ab4d282d5d2
+run_name: capable-steed-352
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752705501876
+status: 3
+tags: []
+user_id: root

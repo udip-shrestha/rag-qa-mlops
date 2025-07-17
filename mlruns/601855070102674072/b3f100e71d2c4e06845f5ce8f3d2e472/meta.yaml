@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/b3f100e71d2c4e06845f5ce8f3d2e472/artifacts
+end_time: 1752718382911
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: b3f100e71d2c4e06845f5ce8f3d2e472
+run_name: chill-lamb-830
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752718382084
+status: 3
+tags: []
+user_id: root

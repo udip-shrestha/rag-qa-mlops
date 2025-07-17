@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/3b154cde8c1c4e75b70786c905e63582/artifacts
+end_time: 1752705425057
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 3b154cde8c1c4e75b70786c905e63582
+run_name: luminous-midge-387
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752705424258
+status: 3
+tags: []
+user_id: root

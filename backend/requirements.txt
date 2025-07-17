@@ -1,3 +1,4 @@
+numpy<2.0.0
 fastapi
 uvicorn
 transformers
@@ -7,5 +8,8 @@ faiss-cpu
 mlflow
 python-multipart
 prometheus-fastapi-instrumentator
+pytest
+httpx
+
 
 

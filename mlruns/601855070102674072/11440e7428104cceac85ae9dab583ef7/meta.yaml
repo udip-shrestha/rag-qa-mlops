@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/11440e7428104cceac85ae9dab583ef7/artifacts
+end_time: 1752718843314
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 11440e7428104cceac85ae9dab583ef7
+run_name: auspicious-carp-856
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752718840032
+status: 3
+tags: []
+user_id: root

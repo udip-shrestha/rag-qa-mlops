@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/fbee768c27dc42188c5054241abc0014/artifacts
+end_time: 1752718782726
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: fbee768c27dc42188c5054241abc0014
+run_name: monumental-ox-829
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752718779717
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/dada6717720b43c2b4430c56810dd9e6/artifacts
+end_time: 1752729785131
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: dada6717720b43c2b4430c56810dd9e6
+run_name: righteous-perch-3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752729782873
+status: 3
+tags: []
+user_id: root

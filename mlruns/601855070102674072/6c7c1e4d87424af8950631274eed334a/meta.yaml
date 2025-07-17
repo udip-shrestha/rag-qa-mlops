@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/6c7c1e4d87424af8950631274eed334a/artifacts
+end_time: 1752718700293
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: 6c7c1e4d87424af8950631274eed334a
+run_name: incongruous-crow-412
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752718697032
+status: 3
+tags: []
+user_id: root
