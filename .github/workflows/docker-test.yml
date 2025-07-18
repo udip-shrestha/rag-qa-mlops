@@ -21,4 +21,4 @@ jobs:
       run: docker build -t backend-test ./backend
 
     - name: Run tests inside Docker
-      run: docker run backend-test pytest tests
+      run: docker run -e PYTHONPATH=/app backend-test pytest tests
