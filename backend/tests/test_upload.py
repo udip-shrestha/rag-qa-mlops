@@ -1,7 +1,15 @@
 import os
 from fastapi.testclient import TestClient
-from main import app
+from unittest.mock import patch
 
+# Patch mlflow before importing app
+with patch("main.mlflow.set_experiment") as mock_set_experiment, \
+     patch("main.mlflow.start_run") as mock_start_run:
+
+    mock_set_experiment.return_value = None
+    mock_start_run.return_value.__enter__.return_value = None
+
+    from main import app  
 
 client = TestClient(app)
 
