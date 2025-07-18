@@ -1,28 +1,19 @@
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi import FastAPI
-from fastapi import HTTPException
-
-from fastapi import UploadFile, File, HTTPException
-import shutil
-import uuid
-
+from fastapi import FastAPI, UploadFile, File, HTTPException
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from transformers import pipeline
 from prometheus_fastapi_instrumentator import Instrumentator
-# from drift_detector import DriftDetector
-
-
 import traceback
 import faiss
 import os
-import logging  
+import logging
 import subprocess
-
 import mlflow
 import mlflow.sklearn
 import numpy as np
-
+import shutil
+import uuid
 
 
 
@@ -40,9 +31,21 @@ DRIFT_THRESHOLD = 0.6  # cosine distance threshold (adjustable)
 # detector.update_reference(reference_queries)
 
 
+def configure_mlflow():
+    mlflow.set_tracking_uri("http://mlflow:5000")
+    mlflow.set_experiment("rag-qa")
 
-mlflow.set_tracking_uri("http://mlflow:5000")
-mlflow.set_experiment("rag-qa")
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+Instrumentator().instrument(app).expose(app)
 
 
 logging.basicConfig(
@@ -56,18 +59,6 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-
-
-app = FastAPI()
-Instrumentator().instrument(app).expose(app)
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # Load models and data
 embed_model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -228,3 +219,7 @@ async def upload_file(file: UploadFile = File(...)):
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+
+if __name__ == "__main__":
+    configure_mlflow()
