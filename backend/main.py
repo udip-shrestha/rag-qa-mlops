@@ -33,13 +33,13 @@ DRIFT_THRESHOLD = 0.6  # cosine distance threshold (adjustable)
 
 def configure_mlflow():
     if os.getenv("GITHUB_ACTIONS") == "true":
-        mlflow.set_tracking_uri("file:/tmp/mlruns")  # local path for CI
+        mlflow.set_tracking_uri("file:/tmp/mlruns")  # Writable during GitHub Actions
     else:
-        mlflow.set_tracking_uri("http://mlflow:5000")  # Docker/production path
+        mlflow.set_tracking_uri("http://mlflow:5000")  # Use MLflow server in prod/dev
 
     mlflow.set_experiment("rag-qa")
 
-
+configure_mlflow()
 app = FastAPI()
 
 app.add_middleware(
@@ -225,6 +225,3 @@ async def upload_file(file: UploadFile = File(...)):
 def health_check():
     return {"status": "ok"}
 
-
-if __name__ == "__main__":
-    configure_mlflow()
