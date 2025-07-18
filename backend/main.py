@@ -32,8 +32,13 @@ DRIFT_THRESHOLD = 0.6  # cosine distance threshold (adjustable)
 
 
 def configure_mlflow():
-    mlflow.set_tracking_uri("http://mlflow:5000")
+    if os.getenv("GITHUB_ACTIONS") == "true":
+        mlflow.set_tracking_uri("file:/tmp/mlruns")  # local path for CI
+    else:
+        mlflow.set_tracking_uri("http://mlflow:5000")  # Docker/production path
+
     mlflow.set_experiment("rag-qa")
+
 
 app = FastAPI()
 
