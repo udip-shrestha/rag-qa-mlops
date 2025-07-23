@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/601855070102674072/f62fe924ccac48d7a595f494559b9b2d/artifacts
+end_time: 1753218246094
+entry_point_name: ''
+experiment_id: '601855070102674072'
+lifecycle_stage: active
+run_id: f62fe924ccac48d7a595f494559b9b2d
+run_name: dapper-shrew-708
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753218239727
+status: 3
+tags: []
+user_id: root
