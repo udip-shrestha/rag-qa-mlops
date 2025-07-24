@@ -23,8 +23,9 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . .
 
 # Expose FastAPI port
-EXPOSE 8000
+EXPOSE 80
 
 # Run the FastAPI server
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+
 

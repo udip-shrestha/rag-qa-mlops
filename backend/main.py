@@ -35,7 +35,7 @@ def configure_mlflow():
     if os.getenv("GITHUB_ACTIONS") == "true":
         mlflow.set_tracking_uri("file:/tmp/mlruns")  # Writable during GitHub Actions
     else:
-        mlflow.set_tracking_uri("http://mlflow:5000")  # Use MLflow server in prod/dev
+        mlflow.set_tracking_uri("http://localhost:5000")    # Use MLflow server in prod/dev
 
     mlflow.set_experiment("rag-qa")
 
