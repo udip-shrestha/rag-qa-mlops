@@ -68,30 +68,52 @@ logger = logging.getLogger(__name__)
 # Load models and data
 embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-base")
-index = faiss.read_index("vector.index")
+if os.path.exists("vector.index"):
+    index = faiss.read_index("vector.index")
+else:
+    dim = 384  # dimension of MiniLM embeddings
+    index = faiss.IndexFlatL2(dim)
+    print("No FAISS index found. Starting with empty index.")
+
 
 
 def load_docs():
-    with open("doc_names.txt", "r") as f:
-        names = [line.strip() for line in f]
-
     contents = []
-    for name in names:
-        with open(os.path.join("docs", name), "r", encoding="utf-8") as f:
-            contents.append(f.read())
+    if os.path.exists("doc_names.txt"):
+        with open("doc_names.txt", "r") as f:
+            names = [line.strip() for line in f]
+
+        for name in names:
+            path = os.path.join("docs", name)
+            if os.path.exists(path):
+                with open(path, "r", encoding="utf-8") as f:
+                    contents.append(f.read())
+            else:
+                print(f"Missing file: {path}")
+    else:
+        print("doc_names.txt not found in load_docs()")
+
     return contents
 
 def load_index():
     return faiss.read_index("vector.index")
 
 
-with open("doc_names.txt", "r") as f:
-    doc_names = [line.strip() for line in f]
-
 docs = []
-for name in doc_names:
-    with open(os.path.join("docs", name), "r", encoding="utf-8") as f:
-        docs.append(f.read())
+if os.path.exists("doc_names.txt"):
+    with open("doc_names.txt", "r") as f:
+        doc_names = [line.strip() for line in f]
+
+    for name in doc_names:
+        doc_path = os.path.join("docs", name)
+        if os.path.exists(doc_path):
+            with open(doc_path, "r", encoding="utf-8") as f:
+                docs.append(f.read())
+        else:
+            print(f"⚠️ Missing doc file: {doc_path}")
+else:
+    print("No doc_names.txt found. Starting with empty docs.")
+
 
 
 class QueryRequest(BaseModel):
@@ -225,8 +247,6 @@ async def upload_file(file: UploadFile = File(...)):
 def health_check():
     return {"status": "ok"}
 
-
 @app.on_event("startup")
 def startup_event():
-    print("FastAPI app started successfully")
-
+    print(" FastAPI backend started and ready.")
