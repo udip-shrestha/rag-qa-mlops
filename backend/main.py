@@ -66,8 +66,13 @@ logger = logging.getLogger(__name__)
 
 
 # Load models and data
-embed_model = SentenceTransformer("all-MiniLM-L6-v2")
-qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-base")
+# embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+# qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-base")
+
+embed_model = None
+qa_pipeline = None
+
+
 if os.path.exists("vector.index"):
     index = faiss.read_index("vector.index")
 else:
