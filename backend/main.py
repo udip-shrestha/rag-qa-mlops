@@ -31,13 +31,25 @@ DRIFT_THRESHOLD = 0.6  # cosine distance threshold (adjustable)
 # detector.update_reference(reference_queries)
 
 
+# def configure_mlflow():
+#     if os.getenv("GITHUB_ACTIONS") == "true":
+#         mlflow.set_tracking_uri("file:/tmp/mlruns")  # Writable during GitHub Actions
+#     else:
+#         mlflow.set_tracking_uri("http://localhost:5000")    # Use MLflow server in prod/dev
+
+#     mlflow.set_experiment("rag-qa")
+
 def configure_mlflow():
     if os.getenv("GITHUB_ACTIONS") == "true":
-        mlflow.set_tracking_uri("file:/tmp/mlruns")  # Writable during GitHub Actions
+        mlflow.set_tracking_uri("file:/tmp/mlruns")
+        mlflow.set_experiment("rag-qa")
     else:
-        mlflow.set_tracking_uri("http://localhost:5000")    # Use MLflow server in prod/dev
+        try:
+            mlflow.set_tracking_uri("http://localhost:5000")
+            mlflow.set_experiment("rag-qa")
+        except Exception as e:
+            print(" Skipping MLflow setup: ", e)
 
-    mlflow.set_experiment("rag-qa")
 
 configure_mlflow()
 app = FastAPI()
