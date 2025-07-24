@@ -215,9 +215,13 @@ def get_answer(request: QueryRequest):
         answer = f"(mocked) This is a dummy answer to: {query}"
         return {"answer": answer}
 
+    except HTTPException as http_err:
+        raise http_err  # ← LET FastAPI handle known HTTP errors
+
     except Exception as e:
         logger.error(f"Unhandled exception: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Unhandled error: {str(e)}")
+
 
 
 
