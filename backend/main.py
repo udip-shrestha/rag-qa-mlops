@@ -225,3 +225,8 @@ async def upload_file(file: UploadFile = File(...)):
 def health_check():
     return {"status": "ok"}
 
+
+@app.on_event("startup")
+def startup_event():
+    print("FastAPI app started successfully")
+
